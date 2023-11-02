@@ -1,0 +1,42 @@
+// #########################import abstract ##################################
+@import 'abstract/variables';
+@import 'abstract/generics';
+
+
+// #########################import Layout ##################################
+@import 'layout/navbar';
+@import 'layout/footer';
+
+
+// #########################import components ###################################
+
+// ------------home page ---------------------------
+@import 'components/homepageSection';
+
+// ------------why us page--------------------------
+@import 'components/overviewHeadSection';
+@import 'components/overviewVisionSection';
+@import 'components/teamSection';
+
+// ------------services page -----------------------
+@import 'components/servicesSection';
+
+// ------------service page ------------------------
+@import 'components/servicePageSection';
+
+// ------------employment page ---------------------
+@import 'components/employmentSection';
+
+// ------------employ Form Page --------------------
+@import 'components/employFormSection';
+
+// ------------contact page ------------------------
+@import 'components/contactSection' ;
+@import 'components/contactForm';
+
+// ------------expert page -------------------------
+@import 'components/expertSection' ;
+
+
+// #########################import media query ##################################
+@import 'media_query/media-queries';

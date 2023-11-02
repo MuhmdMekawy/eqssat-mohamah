@@ -1,0 +1,94 @@
+.employForm{
+  .image{
+    max-width: 430px;
+    margin: 0 auto;
+    img{
+      width: 100%;
+    }
+  }
+  .title{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    h3{
+      svg{
+        width: 33px;
+      }
+    }
+  }
+  form{
+    margin: 33px 0 25px;
+    text-align: center;
+    h2{
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 26px;
+      color: $purpleColor;
+      margin-bottom: 30px
+    }
+    .cont{
+      @include displayGrid(500px);
+      margin-bottom: 20px;
+      max-width: 100%;
+      input{
+        padding: 25px;
+        border: 2px solid $purpleColor;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 26px;
+        color: $textColor;
+        width: 100%;
+        &::-webkit-file-upload-button{
+          display: none;
+        }
+      }
+      .input{
+        position: relative;
+        height: 79px;
+        label{
+          position: absolute;
+          left: 0;
+          top: 0;
+          padding: 25px;
+          background: $coffeColor;
+          color: #fff;
+          height: 100%;
+          cursor: pointer;
+          z-index: 2;
+          svg{
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+    textarea{
+      padding:12px 25px;
+      border: 2px solid $purpleColor;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 26px;
+      color: $textColor;
+    }
+    input[type=submit]{
+      color: #fff;
+      background: #AC926E;
+      margin-top: 25px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      padding: 14px 22px;
+      transition: $transition;
+      border: 1px solid;
+      &:hover{
+        background: #fff;
+        color: $coffeColor;
+        border: 1px solid $coffeColor;
+      }
+    }
+  }
+}

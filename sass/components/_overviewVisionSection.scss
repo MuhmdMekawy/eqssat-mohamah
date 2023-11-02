@@ -1,0 +1,34 @@
+.vision{
+  .content{
+    @include displayGrid(450px , 1fr);
+    .cont{
+      text-align: center;
+      max-width: 387px;
+      padding: 28px 6px;
+      border: 5px solid $coffeColor;
+      height: 304px;
+      svg{
+        width: 67px;
+        height: 67px;
+      }
+      h5{
+        color: $coffeColor;
+        margin: 9px 0 19px;
+        font-size: 30px;
+        font-weight: 500;
+      }
+      .text{
+        color: $textColor;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 26px;
+        max-height: 139px;
+        overflow: hidden;
+        
+      }
+      &:first-child{
+        margin-right: auto;
+      }
+    }
+  }
+}

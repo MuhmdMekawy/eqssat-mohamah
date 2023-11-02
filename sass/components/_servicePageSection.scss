@@ -1,0 +1,20 @@
+.service{
+  h1{
+    color: $purpleColor;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+  .image{
+    margin: 30px 0 ;
+    img{
+      width: 100%;
+    }
+  }
+  .text{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    
+  }
+}

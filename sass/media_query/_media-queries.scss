@@ -1,0 +1,158 @@
+@media (max-width:1200px){}
+@media (max-width:991px){
+  .overview{
+    padding-top: 100px;
+    .content{
+      .written{
+        padding-bottom: 0;
+      }
+      .image{
+        margin: 0 auto;
+      }
+    }
+  }
+  .vision{
+    .content{
+      @include displayGrid(300px , 1fr)
+    }
+  }
+  .contact-form{
+    .cont{
+      +input{
+        max-width: none;
+        // margin: 0;
+      }
+    }
+  }
+  .expert{
+    .content{
+      .expert-text{
+        padding-top: 30px;
+      }
+    }
+  }
+}
+@media (max-width:767px){
+  .vision{
+    .content{
+      .cont{
+        margin: 0 auto;
+      }
+    }
+  }
+}
+@media (max-width:560px){
+  nav{
+    .navbar-brand{
+      max-width: 200px;
+    }
+  }
+  .main-button{
+    font-size: 18px;
+  }
+  
+  .home-page {
+    .headSection {
+      .content {
+        h1{
+          font-size: 35px;
+        }
+        h4{
+          font-size: 14px;
+        }
+        .sec-button{
+          font-size: 16px;
+          padding: 9px 100px;
+        }
+      }
+    }
+  }
+  .overview{
+    .content {
+      @include displayGrid(310px);
+      .written{
+        .signs{
+          @include displayGrid(145px);
+          h4{
+            font-size: 18px;
+          }
+        }
+        .text{
+          font-size: 13px;
+        }
+      }
+      .image{
+        img{
+          max-width: 288px;
+          margin-left: auto;
+        }
+        .frame{
+          left: -12px;
+          top: -71px;
+          height: 418px;
+          max-width: 290px;
+        }
+        
+      }
+    }
+  }
+  .services{
+    .content{
+      @include displayGrid(300px)
+    }
+  }
+  .service{
+    h1{
+      font-size: 22px;
+    }
+    .text{
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  .employForm {
+    form {
+      .cont{
+        @include displayGrid(300px)
+      }
+      input , .input{
+        max-width: 470px;
+        margin: 0 auto 20px;
+        width: 100%;
+        overflow: hidden;
+      }
+      textarea{
+        max-width: 470px;
+        width: 100%;
+      }
+    }
+  }
+  .contact{
+    .contact-details{
+      .top{
+        @include displayGrid(250px);
+        .cont{
+          h3{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+  .contact-form{
+    .cont{
+      @include displayGrid(290px)
+    }
+  }
+  .expert{
+    .content{
+      @include displayGrid(300px);
+      .expert-text{
+        padding-bottom: 50px;
+        .cont{
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}

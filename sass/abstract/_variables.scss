@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'bahij';
+  src: url('../fonts/alfont_com_بهيج-بادية-رفيع.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+$mainFont : 'bahij' ;
+$textColor:#8E8E8E;
+$blackColor:#000;
+$purpleColor: #514E62;
+$coffeColor : #AC926E;
+$transition:all 0.3s ease-in-out;

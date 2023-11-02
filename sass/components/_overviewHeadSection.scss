@@ -1,0 +1,60 @@
+.overview{
+  .content{
+    @include displayGrid(450px , 1fr );
+    .image{
+      position: relative;
+      width: fit-content;
+      margin: 0 auto 0 65px;
+      img{
+        max-width:420px;
+        height: 100%;
+        width: 100%;
+        // transform: translate(6px, 60px);
+        object-fit: cover;
+      }
+      .frame{
+        position: absolute;
+        left: -44px;
+        top: -79px;
+        height: 558px;
+        max-width: 409px;
+        width: 100%;
+        border: 27px solid $coffeColor;
+        z-index: -1;
+      }
+    }
+    .written{
+      padding-top: 100px;
+      padding-bottom: 56px;
+      h2{
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 26px;
+        color: $blackColor;
+      }
+      .text{
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px;
+        color: $textColor;
+        margin-bottom: 26px;
+        // max-width: 590px;
+      }
+      .signs{
+        @include displayGrid(200px , 30px , 20px , center , flex-start);
+        h4{
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 26px;
+          margin-bottom: 0;
+          svg{
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}

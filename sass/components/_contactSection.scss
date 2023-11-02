@@ -1,0 +1,103 @@
+.contact{
+  padding-bottom: 0;
+  .contact-details{
+    margin-top: 11px;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 54px;
+    background: url('../images//Group104.png');
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .top{
+      background: url('../images/Rectangle21.png');
+      background-position: right top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include displayGrid(310px);
+      padding: 83px 35px;
+      position: relative;
+      margin-bottom: 50px;
+      z-index: 0;
+      &::after{
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: -30px;
+        max-width: 90%;
+        width: 100%;
+        height: 30px;
+        transform: translateX(-50%);
+        background: rgb(81 78 98 / 60%);
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        left: 0%;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background:  #514E62E5;
+        z-index: -1;
+      }
+      .cont{
+        display: flex;
+        flex-direction: row;
+        gap: 23px;
+        align-items: center;
+        justify-content: flex-start;
+        color: #fff;
+        h3{
+          font-size: 24px;
+          font-weight: 500;
+          margin-bottom: 6px;
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    .bottom{
+      @include displayGrid(310px);
+      align-items: flex-start;
+      .cont{
+        border: 1px solid #fff;
+        color: #fff;
+        padding: 16px 15px 22px;
+        height: 257px;
+        h4{
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 26px;
+          margin-bottom: 11px;
+          text-align: center;
+        }
+        .day{
+          display: flex;
+          flex-direction: row;
+          gap: 20px;
+          justify-content: space-between;
+          align-items: start;
+          h6{
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 0;
+          }
+        }
+        &:nth-child(2){
+          text-align: center;
+        }
+        &:nth-child(3){
+          border: none;
+          padding: 0;
+        }
+        iframe{
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+    }
+  }
+}

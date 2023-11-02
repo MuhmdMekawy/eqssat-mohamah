@@ -1,0 +1,46 @@
+.employment{
+  .content{
+    margin-top: 45px;
+    @include displayGrid(310px);
+    .cont{
+      padding: 16px 9px 26px;
+      border: 1px solid $coffeColor;
+      text-align: center;
+      h3{
+        font-size: 16px;
+        font-weight: 500;
+        color: $purpleColor;
+        margin-bottom: 4px;
+        text-align: start;
+        &:first-child{
+          font-size: 18px;
+        }
+        svg{
+          width: 22px;
+          margin-left: 9px;
+        }
+      }
+      .text{
+        margin: 28px auto 43px;
+        font-size: 20px;
+        font-weight: 500;
+        color: $textColor;
+        max-width: 359px;
+        line-height: 26px;
+        text-align: start;
+        max-height: 100px;
+        overflow: hidden;
+      }
+      button{
+        border-color:$coffeColor;
+        color: $coffeColor;
+        margin: 0 auto;
+        padding: 14px 25px;
+        font-size: 16px;
+        &:hover{
+          color: #fff;
+        }
+      }
+    }
+  }
+}

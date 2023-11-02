@@ -1,0 +1,39 @@
+.contact-form{
+  padding-top: 50px;
+  text-align: center;
+  .cont{
+    @include displayGrid(430px);
+    +input{
+      max-width: 590px;
+      margin: 23px auto;
+      width: 100%;
+    }
+  }
+  input , textarea{
+    height: 75px;
+    background: transparent;
+    border: 2px solid #FFF;
+    color: #FFF;
+    padding-right: 24px;
+    font-size: 24px;
+    font-weight: 500;
+    &::placeholder{
+      color: #FFF;
+    }
+  }
+  textarea{
+    padding-top: 25px;
+    height: 357px;
+    max-height: 357px;
+    min-height: 100px;
+    margin-bottom: 23px;
+    +input[type = submit]{
+      transition: $transition;
+      width: 184px;
+      &:hover{
+        background: #FFF;
+        color: $coffeColor;
+      }
+    }
+  }
+}
