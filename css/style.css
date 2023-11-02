@@ -2,7 +2,7 @@
 @font-face {
   font-family: "bahij";
   src: url("../fonts/alfont_com_بهيج-بادية-رفيع.ttf") format("truetype");
-  font-weight: normal;
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -54,7 +54,10 @@ a {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 section {
@@ -71,6 +74,9 @@ input, textarea {
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 textarea {
@@ -205,8 +211,8 @@ nav .offcanvas-body .navbar-nav .nav-item::after {
   height: 1px;
   width: 0%;
   background: #AC926E;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 nav .offcanvas-body .navbar-nav .nav-item:hover::after {
   width: 100%;
@@ -233,7 +239,7 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
   max-width: 260px;
   margin-bottom: 17px;
 }
-.footer .content .cont h4 {
+.footer .content .cont .text {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 17px;
@@ -255,11 +261,11 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
       -ms-flex-align: center;
           align-items: center;
 }
-.footer .content .cont .links a img {
+.footer .content .cont .links a svg {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.footer .content .cont .links a img:hover {
+.footer .content .cont .links a svg:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
@@ -330,7 +336,7 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
   font-weight: 500;
   margin-bottom: 5px;
 }
-.headSection .content h4 {
+.headSection .content .text {
   font-size: 20px;
   max-width: 588px;
   line-height: 40px;
@@ -376,12 +382,13 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.overview .content .image .frame {
+.overview .content .image::after {
+  content: "";
   position: absolute;
   left: -44px;
   top: -79px;
-  height: 558px;
-  max-width: 409px;
+  height: 430px;
+  max-width: 309px;
   width: 100%;
   border: 27px solid #AC926E;
   z-index: -1;
@@ -462,7 +469,7 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
   font-size: 20px;
   font-weight: 500;
   line-height: 26px;
-  max-height: 139px;
+  max-height: 110px;
   overflow: hidden;
 }
 .vision .content .cont:first-child {
@@ -487,6 +494,7 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
 }
 .team .content .cont .image {
   position: relative;
+  height: 303px;
 }
 .team .content .cont .image .title {
   text-align: center;
@@ -529,12 +537,27 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
 }
 .services .content .cont {
   text-align: center;
-  padding: 21px 17px 41px;
+  padding: 60px 17px 41px;
   background: #514E62;
   color: #fff;
 }
-.services .content .cont .image img {
-  width: 74px;
+.services .content .cont .image {
+  width: 77px;
+  height: 77px;
+  margin: 0 auto 40px;
+  background: #AC926E;
+  padding: 20px;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+  position: relative;
+  -webkit-box-shadow: -14px -11px 0px rgba(172, 146, 110, 0.5098039216);
+          box-shadow: -14px -11px 0px rgba(172, 146, 110, 0.5098039216);
+}
+.services .content .cont .image svg {
+  width: 40px;
+  height: 40px;
+  -webkit-transform: rotate(-40deg);
+          transform: rotate(-40deg);
 }
 .services .content .cont h3, .services .content .cont .specialHead h4, .specialHead .services .content .cont h4 {
   font-size: 26px;
@@ -561,9 +584,8 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
 }
 .service .image {
   margin: 30px 0;
-}
-.service .image img {
-  width: 100%;
+  max-height: 493px;
+  overflow: hidden;
 }
 .service .text {
   font-size: 20px;
@@ -627,7 +649,7 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
 
 .employForm .image {
   max-width: 430px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 .employForm .image img {
   width: 100%;
@@ -680,7 +702,7 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
   margin-bottom: 20px;
   max-width: 100%;
 }
-.employForm form .cont input {
+.employForm form .cont .input-wrapper, .employForm form .cont .input {
   padding: 25px;
   border: 2px solid #514E62;
   font-size: 24px;
@@ -689,12 +711,9 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
   color: #8E8E8E;
   width: 100%;
 }
-.employForm form .cont input::-webkit-file-upload-button {
-  display: none;
-}
 .employForm form .cont .input {
   position: relative;
-  height: 79px;
+  height: 90px;
 }
 .employForm form .cont .input label {
   position: absolute;
@@ -717,6 +736,12 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
   font-weight: 500;
   line-height: 26px;
   color: #8E8E8E;
+}
+.employForm form input[type=file] {
+  padding-top: 8px;
+}
+.employForm form input[type=file]::-webkit-file-upload-button {
+  display: none;
 }
 .employForm form input[type=submit] {
   color: #fff;
@@ -817,6 +842,22 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
 .contact .contact-details .top .cont h3:last-child, .contact .contact-details .top .cont .specialHead h4:last-child, .specialHead .contact .contact-details .top .cont h4:last-child {
   margin-bottom: 0;
 }
+.contact .contact-details .top .cont .image {
+  background: url("../images/Ellipse1.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  background-position: center;
+}
+.contact .contact-details .top .cont .image svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
 .contact .contact-details .bottom {
   display: -ms-grid;
   display: grid;
@@ -837,6 +878,7 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
   color: #fff;
   padding: 16px 15px 22px;
   height: 257px;
+  overflow: hidden;
 }
 .contact .contact-details .bottom .cont h4 {
   font-size: 24px;
@@ -861,13 +903,19 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
       -ms-flex-align: start;
           align-items: start;
 }
-.contact .contact-details .bottom .cont .day h6 {
+.contact .contact-details .bottom .cont h6 {
   font-size: 20px;
   font-weight: 500;
   margin-bottom: 0;
+  max-width: 150px;
+  max-height: 24px;
+  overflow: hidden;
 }
 .contact .contact-details .bottom .cont:nth-child(2) {
   text-align: center;
+}
+.contact .contact-details .bottom .cont:nth-child(2) h6 {
+  margin: 0 auto;
 }
 .contact .contact-details .bottom .cont:nth-child(3) {
   border: none;
@@ -894,33 +942,36 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
       -ms-flex-align: center;
           align-items: center;
 }
-.contact-form .cont + input {
+.contact-form .cont + .input-wrapper, .contact-form .employForm form .cont .cont + .input, .employForm form .cont .contact-form .cont + .input {
   max-width: 590px;
   margin: 23px auto;
   width: 100%;
 }
-.contact-form input, .contact-form textarea {
+.contact-form .input-wrapper, .contact-form .employForm form .cont .input, .employForm form .cont .contact-form .input, .contact-form textarea {
   height: 75px;
   background: transparent;
   border: 2px solid #FFF;
-  color: #FFF;
   padding-right: 24px;
+}
+.contact-form input {
+  color: #FFF;
+  background: transparent;
   font-size: 24px;
   font-weight: 500;
 }
-.contact-form input::-webkit-input-placeholder, .contact-form textarea::-webkit-input-placeholder {
+.contact-form input::-webkit-input-placeholder {
   color: #FFF;
 }
-.contact-form input::-moz-placeholder, .contact-form textarea::-moz-placeholder {
+.contact-form input::-moz-placeholder {
   color: #FFF;
 }
-.contact-form input:-ms-input-placeholder, .contact-form textarea:-ms-input-placeholder {
+.contact-form input:-ms-input-placeholder {
   color: #FFF;
 }
-.contact-form input::-ms-input-placeholder, .contact-form textarea::-ms-input-placeholder {
+.contact-form input::-ms-input-placeholder {
   color: #FFF;
 }
-.contact-form input::placeholder, .contact-form textarea::placeholder {
+.contact-form input::placeholder {
   color: #FFF;
 }
 .contact-form textarea {
@@ -929,6 +980,21 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
   max-height: 357px;
   min-height: 100px;
   margin-bottom: 23px;
+}
+.contact-form textarea::-webkit-input-placeholder {
+  color: #FFF;
+}
+.contact-form textarea::-moz-placeholder {
+  color: #FFF;
+}
+.contact-form textarea:-ms-input-placeholder {
+  color: #FFF;
+}
+.contact-form textarea::-ms-input-placeholder {
+  color: #FFF;
+}
+.contact-form textarea::placeholder {
+  color: #FFF;
 }
 .contact-form textarea + input[type=submit] {
   -webkit-transition: all 0.3s ease-in-out;
@@ -994,9 +1060,23 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
 .expert .content .expert-text .cont:last-child {
   margin-bottom: 0;
 }
-.expert .content .expert-text .cont .icon img {
+.expert .content .expert-text .cont .icon {
+  background: url("../images/Ellipse1.png");
+  width: 97px;
+  height: 97px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  position: relative;
+}
+.expert .content .expert-text .cont .icon svg {
   -o-object-fit: cover;
      object-fit: cover;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .expert .content .expert-text .cont h5 {
   font-size: 24px;
@@ -1095,10 +1175,10 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
     max-width: 288px;
     margin-left: auto;
   }
-  .overview .content .image .frame {
-    left: -12px;
+  .overview .content .image::after {
+    left: -50px;
     top: -71px;
-    height: 418px;
+    height: 320px;
     max-width: 290px;
   }
   .services .content {
@@ -1132,7 +1212,7 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
         -ms-flex-align: center;
             align-items: center;
   }
-  .employForm form input, .employForm form .input {
+  .employForm form .input-wrapper, .employForm form .cont .input, .employForm form .input {
     max-width: 470px;
     margin: 0 auto 20px;
     width: 100%;
@@ -1187,5 +1267,10 @@ nav .offcanvas-body .navbar-nav .nav-item.dropdown .dropdown-menu li a:hover {
   .expert .content .expert-text .cont {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+@media (max-width: 400px) {
+  .overview .content .image::after {
+    left: -16px;
   }
 }

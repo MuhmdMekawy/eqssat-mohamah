@@ -35,8 +35,19 @@
           margin-bottom: 0;
         }
         .icon{
-          img{
+          background: url('../images/Ellipse1.png');
+          width: 97px;
+          height: 97px;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          position: relative;
+          svg{
             object-fit: cover;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50% , -50%);
           }
         }
         h5{

@@ -1,7 +1,7 @@
 .employForm{
   .image{
     max-width: 430px;
-    margin: 0 auto;
+    margin: 20px auto ;
     img{
       width: 100%;
     }
@@ -35,7 +35,7 @@
       @include displayGrid(500px);
       margin-bottom: 20px;
       max-width: 100%;
-      input{
+      .input-wrapper{
         padding: 25px;
         border: 2px solid $purpleColor;
         font-size: 24px;
@@ -43,13 +43,11 @@
         line-height: 26px;
         color: $textColor;
         width: 100%;
-        &::-webkit-file-upload-button{
-          display: none;
-        }
       }
       .input{
         position: relative;
-        height: 79px;
+        @extend .input-wrapper;
+        height: 90px;
         label{
           position: absolute;
           left: 0;
@@ -73,6 +71,12 @@
       font-weight: 500;
       line-height: 26px;
       color: $textColor;
+    }
+    input[type=file]{
+      padding-top: 8px;
+      &::-webkit-file-upload-button{
+        display: none;
+      }
     }
     input[type=submit]{
       color: #fff;

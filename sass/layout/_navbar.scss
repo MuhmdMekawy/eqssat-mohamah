@@ -43,7 +43,7 @@ nav{
           height: 1px;
           width: 0%;
           background: $coffeColor;
-          transition: $transition;
+          transition: 1s;
         }
         &:hover{
           &::after{

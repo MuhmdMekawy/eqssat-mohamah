@@ -86,10 +86,10 @@
           max-width: 288px;
           margin-left: auto;
         }
-        .frame{
-          left: -12px;
+        &::after{
+          left: -50px;
           top: -71px;
-          height: 418px;
+          height: 320px;
           max-width: 290px;
         }
         
@@ -115,7 +115,7 @@
       .cont{
         @include displayGrid(300px)
       }
-      input , .input{
+      .input-wrapper , .input{
         max-width: 470px;
         margin: 0 auto 20px;
         width: 100%;
@@ -152,6 +152,18 @@
         .cont{
           flex-wrap: wrap;
         }
+      }
+    }
+  }
+}
+@media (max-width : 400px){
+  .overview{
+    .content {
+      .image{
+        &::after{
+          left: -16px;
+        }
+        
       }
     }
   }

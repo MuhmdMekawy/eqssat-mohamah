@@ -12,12 +12,13 @@
         // transform: translate(6px, 60px);
         object-fit: cover;
       }
-      .frame{
+      &::after{
+        content: '';
         position: absolute;
         left: -44px;
         top: -79px;
-        height: 558px;
-        max-width: 409px;
+        height: 430px;
+        max-width: 309px;
         width: 100%;
         border: 27px solid $coffeColor;
         z-index: -1;
