@@ -41,8 +41,20 @@
     .content{
       .cont{
         .image{
-          img{
-            width: 108px;
+          width: 100px;
+          height: 90px;
+          margin: 0 auto 40px;
+          background: $coffeColor;
+          padding: 14px 23px 20px 20px;
+          transform: skew(343deg);
+          position: relative;
+          box-shadow: none;
+          outline: 2px dashed $coffeColor;
+          border: 5px solid $purpleColor;
+          svg{
+            width: 50px;
+            height: 50px;
+            transform: skew(-160deg);
           }
         }
       }
